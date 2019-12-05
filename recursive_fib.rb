@@ -1,0 +1,12 @@
+require 'benchmark'
+include Benchmark
+
+
+puts Benchmark.measure { 
+
+  def fibonacci(n)
+   n <= 1 ? n :  fibonacci( n - 1 ) + fibonacci( n - 2 ) 
+end
+puts fibonacci(35)
+
+}
